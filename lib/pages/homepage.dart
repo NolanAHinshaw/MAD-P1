@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:inclassactivity10/components/TrendingRecipes.dart';
+import 'package:mealplannerapp/components/TrendingRecipes.dart';
 
 class HomePage extends StatelessWidget {
   @override

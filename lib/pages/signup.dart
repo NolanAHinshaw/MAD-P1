@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:inclassactivity10/pages/login.dart';
+import 'package:mealplannerapp/pages/login.dart';
 
 class RegistrationPage extends StatefulWidget {
   const RegistrationPage({super.key});

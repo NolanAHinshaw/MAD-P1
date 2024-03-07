@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:inclassactivity10/pages/signup.dart';
-import 'package:inclassactivity10/pages/login.dart';
-import 'package:inclassactivity10/pages/homepage.dart';
+import 'package:mealplannerapp/pages/signup.dart';
+import 'package:mealplannerapp/pages/login.dart';
+import 'package:mealplannerapp/pages/homepage.dart';
 
 void main() => runApp(const MyApp());
 

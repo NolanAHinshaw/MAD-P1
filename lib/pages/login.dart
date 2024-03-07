@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:inclassactivity10/pages/homepage.dart';
+import 'package:mealplannerapp/pages/homepage.dart';
 
 class LoginState extends State<LoginPage> {
   final TextEditingController _usernameController = TextEditingController();
