@@ -10,17 +10,38 @@ class LoginState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text('Login Page'),
+      appBar: AppBar(
+        title: const Text(
+          'Login Page',
+          style: TextStyle(fontWeight: FontWeight.bold),
         ),
-        body: Stack(
-          children: [
-            Form(
-              key: _formKey,
-              child: Column(children: [
+      ),
+      body: Container(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/images/login_page.jpg'),
+            fit: BoxFit.fill,
+          ),
+        ),
+        child: Center(
+          child: SingleChildScrollView(
+          child: Form(
+            key: _formKey,
+            child: Column(
+              children: [
+                const SizedBox(height: 10.0),
                 TextFormField(
                   controller: _usernameController,
-                  decoration: const InputDecoration(hintText: 'Email'),
+                  decoration: InputDecoration(
+                    hintText: 'Email',
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                      borderSide: const BorderSide(color: Colors.white),
+                    ),
+                    contentPadding: const EdgeInsets.symmetric(
+                        vertical: 10.0, horizontal: 15.0),
+                  ),
+
 // The validator receives the text that the user has entered.
                   validator: (value) {
                     if (value == null || value.isEmpty) {
@@ -36,9 +57,19 @@ class LoginState extends State<LoginPage> {
                     return null;
                   },
                 ),
+                const SizedBox(
+                  height: 10.0,
+                ),
                 TextFormField(
                   controller: _pwController,
-                  decoration: const InputDecoration(hintText: 'Password'),
+                  decoration: InputDecoration(
+                    hintText: 'Password',
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                    contentPadding: const EdgeInsets.symmetric(
+                        vertical: 10.0, horizontal: 15.0),
+                  ),
 // The validator receives the text that the user has entered.
                   validator: (value) {
                     if (value == null || value.isEmpty) {
@@ -62,33 +93,44 @@ class LoginState extends State<LoginPage> {
 // you'd often call a server or save the information in a database.
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                            builder: (context) =>
-                                HomePage(), //here we need to insert homepage for P1
+                            builder: (context) => HomePage(
+                                firstName: widget
+                                    .firstName), //here we need to insert homepage for P1
                           ),
                         );
                       }
                     },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.blue,
+                      textStyle: const TextStyle(color: Colors.black),
+                    ),
                     child: const Text('Login'),
                   ),
                 ),
-              ]),
+                ElevatedButton(
+                  onPressed: () {
+                    // Navigate back to first route when tapped.
+                    Navigator.pop(context);
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.blue,
+                    textStyle: const TextStyle(color: Colors.black),
+                  ),
+                  child: const Text('Back to Register'),
+                ),
+              ],
             ),
-            Center(
-              child: ElevatedButton(
-                onPressed: () {
-                  // Navigate back to first route when tapped.
-                  Navigator.pop(context);
-                },
-                child: const Text('Back to Register'),
-              ),
-            ),
-          ],
-        ));
+          ),
+        ),
+      ),
+      ),  
+    );
   }
 }
 
 class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+  final String firstName;
+  const LoginPage({super.key, required this.firstName});
   @override
   LoginState createState() {
     return LoginState();

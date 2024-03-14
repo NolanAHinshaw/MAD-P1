@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
-    const appTitle = 'Landing Page';
+    const appTitle = 'Meal Planner';
     return MaterialApp(
       title: appTitle,
       home: Scaffold(
@@ -23,9 +23,9 @@ class MyApp extends StatelessWidget {
                   case '/registration':
                     return const RegistrationPage();
                   case '/login':
-                    return const LoginPage();
+                    return const LoginPage(firstName: '',);
                   case '/homepage':
-                    return HomePage();
+                    return HomePage(firstName: '',);
                   default:
                     // Default to RegistrationPage if the route is not recognized
                     return const RegistrationPage();

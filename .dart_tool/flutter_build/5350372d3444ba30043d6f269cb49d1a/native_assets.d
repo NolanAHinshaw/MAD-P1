@@ -1,0 +1,1 @@
+ C:\\Users\\chris\\OneDrive\\Desktop\\dev\\mealplannerapp\\MAD-P1-1\\.dart_tool\\flutter_build\\5350372d3444ba30043d6f269cb49d1a\\native_assets.yaml: 
