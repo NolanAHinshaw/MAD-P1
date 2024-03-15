@@ -1,11 +1,36 @@
 import 'package:flutter/material.dart';
 import 'package:mealplannerapp/pages/homepage.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class LoginState extends State<LoginPage> {
   final TextEditingController _usernameController = TextEditingController();
   final TextEditingController _pwController = TextEditingController();
 
+  Future<bool> validateUser(String username, String password) async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    String savedUsername = prefs.getString('username') ?? '';
+    String savedPassword = prefs.getString('password') ?? '';
+    return savedUsername == username && savedPassword == password;
+  }
+
   final _formKey = GlobalKey<FormState>();
+
+  void login(BuildContext context) async {
+    String username = _usernameController.text.trim();
+    String password = _pwController.text.trim();
+
+    bool isValid = await validateUser(username, password);
+
+    if (isValid) {
+      // Navigate to the home page or perform any other action
+      Navigator.pushNamed(context, '/homepage');
+    } else {
+      // Show error message or perform any other action
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+        content: Text('Invalid username or password'),
+      ));
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -32,6 +57,7 @@ class LoginState extends State<LoginPage> {
                 const SizedBox(height: 10.0),
                 TextFormField(
                   controller: _usernameController,
+<<<<<<< Updated upstream
                   decoration: InputDecoration(
                     hintText: 'Email',
                     border: OutlineInputBorder(
@@ -42,18 +68,14 @@ class LoginState extends State<LoginPage> {
                         vertical: 10.0, horizontal: 15.0),
                   ),
 
+=======
+                  decoration: const InputDecoration(hintText: 'Username'),
+>>>>>>> Stashed changes
 // The validator receives the text that the user has entered.
                   validator: (value) {
                     if (value == null || value.isEmpty) {
                       return 'Please enter some text';
                     }
-                    RegExp emailRegExp =
-                        RegExp(r'^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$');
-
-                    if (!emailRegExp.hasMatch(value)) {
-                      return 'Please enter a valid email address';
-                    }
-
                     return null;
                   },
                 ),
@@ -91,6 +113,7 @@ class LoginState extends State<LoginPage> {
                       if (_formKey.currentState!.validate()) {
 // If the form is valid, display a snackbar. In the real world,
 // you'd often call a server or save the information in a database.
+<<<<<<< Updated upstream
                         Navigator.of(context).push(
                           MaterialPageRoute(
                             builder: (context) => HomePage(
@@ -98,6 +121,9 @@ class LoginState extends State<LoginPage> {
                                     .firstName), //here we need to insert homepage for P1
                           ),
                         );
+=======
+                        login(context);
+>>>>>>> Stashed changes
                       }
                     },
                     style: ElevatedButton.styleFrom(

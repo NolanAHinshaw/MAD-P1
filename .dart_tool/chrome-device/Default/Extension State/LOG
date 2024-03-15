@@ -1,3 +1,9 @@
+<<<<<<< Updated upstream
 2024/03/13-13:49:38.274 39b4 Reusing MANIFEST C:\Users\chris\AppData\Local\Temp\flutter_tools.bbc2a42c\flutter_tools_chrome_device.5ca9520c\Default\Extension State/MANIFEST-000001
 2024/03/13-13:49:38.274 39b4 Recovering log #3
 2024/03/13-13:49:38.275 39b4 Reusing old log C:\Users\chris\AppData\Local\Temp\flutter_tools.bbc2a42c\flutter_tools_chrome_device.5ca9520c\Default\Extension State/000003.log 
+=======
+2024/03/12-15:03:34.483 8903 Reusing MANIFEST /private/var/folders/7x/368009v94hd2tgq1x4_5bvkw0000gn/T/flutter_tools.8a1bn1/flutter_tools_chrome_device.Z42KUP/Default/Extension State/MANIFEST-000001
+2024/03/12-15:03:34.483 8903 Recovering log #3
+2024/03/12-15:03:34.483 8903 Reusing old log /private/var/folders/7x/368009v94hd2tgq1x4_5bvkw0000gn/T/flutter_tools.8a1bn1/flutter_tools_chrome_device.Z42KUP/Default/Extension State/000003.log 
+>>>>>>> Stashed changes

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import '../models/recipes.dart';
 
 class TrendingRecipes extends StatelessWidget {
+  const TrendingRecipes({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -22,7 +24,7 @@ class TrendingRecipes extends StatelessWidget {
                   children: [
                     Image.asset('assets/images/${recipe.image}',
                         height: 120, width: 120, fit: BoxFit.cover),
-                    SizedBox(height: 8),
+                    const SizedBox(height: 8),
                     Text(recipe.title),
                   ],
                 ),

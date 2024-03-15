@@ -1,3 +1,9 @@
+<<<<<<< Updated upstream
 2024/03/13-13:49:38.115 4f5c Reusing MANIFEST C:\Users\chris\AppData\Local\Temp\flutter_tools.bbc2a42c\flutter_tools_chrome_device.5ca9520c\Default\Sync Data\LevelDB/MANIFEST-000001
 2024/03/13-13:49:38.115 4f5c Recovering log #3
 2024/03/13-13:49:38.116 4f5c Reusing old log C:\Users\chris\AppData\Local\Temp\flutter_tools.bbc2a42c\flutter_tools_chrome_device.5ca9520c\Default\Sync Data\LevelDB/000003.log 
+=======
+2024/03/12-15:03:33.808 8307 Reusing MANIFEST /private/var/folders/7x/368009v94hd2tgq1x4_5bvkw0000gn/T/flutter_tools.8a1bn1/flutter_tools_chrome_device.Z42KUP/Default/Sync Data/LevelDB/MANIFEST-000001
+2024/03/12-15:03:33.813 8307 Recovering log #3
+2024/03/12-15:03:33.813 8307 Reusing old log /private/var/folders/7x/368009v94hd2tgq1x4_5bvkw0000gn/T/flutter_tools.8a1bn1/flutter_tools_chrome_device.Z42KUP/Default/Sync Data/LevelDB/000003.log 
+>>>>>>> Stashed changes
