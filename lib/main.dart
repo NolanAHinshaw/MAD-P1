@@ -10,11 +10,7 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
-<<<<<<< Updated upstream
     const appTitle = 'Meal Planner';
-=======
-    const appTitle = 'Meal Planner App';
->>>>>>> Stashed changes
     return MaterialApp(
       title: appTitle,
       home: Scaffold(
@@ -28,15 +24,13 @@ class MyApp extends StatelessWidget {
                   case '/registration':
                     return const RegistrationPage();
                   case '/login':
-                    return const LoginPage(firstName: '',);
+                    return const LoginPage(
+                      firstName: '',
+                    );
                   case '/homepage':
-<<<<<<< Updated upstream
-                    return HomePage(firstName: '',);
-=======
-                    return HomePage();
-                  case '/meal-planner':
-                    return MealPlanner();
->>>>>>> Stashed changes
+                    return HomePage(
+                      firstName: '',
+                    );
                   default:
                     // Default to RegistrationPage if the route is not recognized
                     return const RegistrationPage();

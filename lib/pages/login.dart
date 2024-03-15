@@ -50,106 +50,90 @@ class LoginState extends State<LoginPage> {
         ),
         child: Center(
           child: SingleChildScrollView(
-          child: Form(
-            key: _formKey,
-            child: Column(
-              children: [
-                const SizedBox(height: 10.0),
-                TextFormField(
-                  controller: _usernameController,
-<<<<<<< Updated upstream
-                  decoration: InputDecoration(
-                    hintText: 'Email',
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10.0),
-                      borderSide: const BorderSide(color: Colors.white),
-                    ),
-                    contentPadding: const EdgeInsets.symmetric(
-                        vertical: 10.0, horizontal: 15.0),
-                  ),
-
-=======
-                  decoration: const InputDecoration(hintText: 'Username'),
->>>>>>> Stashed changes
+            child: Form(
+              key: _formKey,
+              child: Column(
+                children: [
+                  const SizedBox(height: 10.0),
+                  TextFormField(
+                    controller: _usernameController,
+                    decoration: const InputDecoration(hintText: 'Username'),
 // The validator receives the text that the user has entered.
-                  validator: (value) {
-                    if (value == null || value.isEmpty) {
-                      return 'Please enter some text';
-                    }
-                    return null;
-                  },
-                ),
-                const SizedBox(
-                  height: 10.0,
-                ),
-                TextFormField(
-                  controller: _pwController,
-                  decoration: InputDecoration(
-                    hintText: 'Password',
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10.0),
-                    ),
-                    contentPadding: const EdgeInsets.symmetric(
-                        vertical: 10.0, horizontal: 15.0),
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return 'Please enter some text';
+                      }
+                      return null;
+                    },
                   ),
+                  const SizedBox(
+                    height: 10.0,
+                  ),
+                  TextFormField(
+                    controller: _pwController,
+                    decoration: InputDecoration(
+                      hintText: 'Password',
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                      contentPadding: const EdgeInsets.symmetric(
+                          vertical: 10.0, horizontal: 15.0),
+                    ),
 // The validator receives the text that the user has entered.
-                  validator: (value) {
-                    if (value == null || value.isEmpty) {
-                      return 'Please enter some text';
-                    }
-                    RegExp passwordRegExp = RegExp(r'^(?=.*[0-9]).{6,}$');
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return 'Please enter some text';
+                      }
+                      RegExp passwordRegExp = RegExp(r'^(?=.*[0-9]).{6,}$');
 
-                    if (!passwordRegExp.hasMatch(value)) {
-                      return 'Password must have a length greater than 6 and include at least one digit';
-                    }
-                    return null;
-                  },
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 16),
-                  child: ElevatedButton(
-                    onPressed: () {
+                      if (!passwordRegExp.hasMatch(value)) {
+                        return 'Password must have a length greater than 6 and include at least one digit';
+                      }
+                      return null;
+                    },
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 16),
+                    child: ElevatedButton(
+                      onPressed: () {
 // Validate returns true if the form is valid, or false otherwise.
-                      if (_formKey.currentState!.validate()) {
+                        if (_formKey.currentState!.validate()) {
 // If the form is valid, display a snackbar. In the real world,
 // you'd often call a server or save the information in a database.
-<<<<<<< Updated upstream
-                        Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: (context) => HomePage(
-                                firstName: widget
-                                    .firstName), //here we need to insert homepage for P1
-                          ),
-                        );
-=======
-                        login(context);
->>>>>>> Stashed changes
-                      }
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => HomePage(
+                                  firstName: widget
+                                      .firstName), //here we need to insert homepage for P1
+                            ),
+                          );
+                          login(context);
+                        }
+                      },
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.blue,
+                        textStyle: const TextStyle(color: Colors.black),
+                      ),
+                      child: const Text('Login'),
+                    ),
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      // Navigate back to first route when tapped.
+                      Navigator.pop(context);
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.blue,
                       textStyle: const TextStyle(color: Colors.black),
                     ),
-                    child: const Text('Login'),
+                    child: const Text('Back to Register'),
                   ),
-                ),
-                ElevatedButton(
-                  onPressed: () {
-                    // Navigate back to first route when tapped.
-                    Navigator.pop(context);
-                  },
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.blue,
-                    textStyle: const TextStyle(color: Colors.black),
-                  ),
-                  child: const Text('Back to Register'),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         ),
       ),
-      ),  
     );
   }
 }
