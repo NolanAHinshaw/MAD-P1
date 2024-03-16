@@ -57,7 +57,14 @@ class LoginState extends State<LoginPage> {
                   const SizedBox(height: 10.0),
                   TextFormField(
                     controller: _usernameController,
-                    decoration: const InputDecoration(hintText: 'Username'),
+                    decoration: InputDecoration(
+                      hintText: 'Username',
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                      contentPadding: const EdgeInsets.symmetric(
+                          vertical: 10.0, horizontal: 15.0),
+                    ),
 // The validator receives the text that the user has entered.
                     validator: (value) {
                       if (value == null || value.isEmpty) {
