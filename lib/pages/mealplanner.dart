@@ -6,7 +6,7 @@ class MealPlanner extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Recipe App'),
+        title: Text('Title Here'),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
