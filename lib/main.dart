@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mealplannerapp/pages/landing_page.dart';
 import 'package:mealplannerapp/pages/signup.dart';
 import 'package:mealplannerapp/pages/login.dart';
 import 'package:mealplannerapp/pages/homepage.dart';
@@ -23,12 +24,17 @@ class MyApp extends StatelessWidget {
                   case '/registration':
                     return const RegistrationPage();
                   case '/login':
-                    return const LoginPage(firstName: '',);
+                    return const LoginPage(
+                      firstName: '',
+                    );
                   case '/homepage':
-                    return HomePage(firstName: '',);
+                    return HomePage(
+                      firstName: '',
+                    );
                   default:
-                    // Default to RegistrationPage if the route is not recognized
-                    return const RegistrationPage();
+                    return const LandingPage(
+                      firstName: '',
+                    );
                 }
               });
             },
