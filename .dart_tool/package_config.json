@@ -3,7 +3,7 @@
   "packages": [
     {
       "name": "async",
-      "rootUri": "file:///Users/runitsnolan/.pub-cache/hosted/pub.dev/async-2.11.0",
+      "rootUri": "file:///C:/Users/chris/AppData/Local/Pub/Cache/hosted/pub.dev/async-2.11.0",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
@@ -50,12 +50,6 @@
       "languageVersion": "3.0"
     },
     {
-      "name": "file",
-      "rootUri": "file:///Users/runitsnolan/.pub-cache/hosted/pub.dev/file-7.0.0",
-      "packageUri": "lib/",
-      "languageVersion": "3.0"
-    },
-    {
       "name": "flutter",
       "rootUri": "file:///Users/runitsnolan/Downloads/flutter/packages/flutter",
       "packageUri": "lib/",
@@ -70,12 +64,6 @@
     {
       "name": "flutter_test",
       "rootUri": "file:///Users/runitsnolan/Downloads/flutter/packages/flutter_test",
-      "packageUri": "lib/",
-      "languageVersion": "3.2"
-    },
-    {
-      "name": "flutter_web_plugins",
-      "rootUri": "file:///Users/runitsnolan/Downloads/flutter/packages/flutter_web_plugins",
       "packageUri": "lib/",
       "languageVersion": "3.2"
     },
@@ -290,7 +278,7 @@
       "languageVersion": "3.2"
     }
   ],
-  "generated": "2024-03-16T01:04:13.424285Z",
+  "generated": "2024-03-16T01:03:09.076147Z",
   "generator": "pub",
   "generatorVersion": "3.2.6"
 }

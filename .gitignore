@@ -1,0 +1,7 @@
+
+*.tmp
+.dart_tool/chrome-device/Default/3e404929-ac49-49c6-b625-ab8bd1c5b9a6.tmp
+.dart_tool/chrome-device/Default/Affiliation Database
+.dart_tool/flutter_build/5350372d3444ba30043d6f269cb49d1a/outputs.json
+.dart_tool/flutter_build/5350372d3444ba30043d6f269cb49d1a/native_assets.yaml
+.dart_tool/flutter_build/5350372d3444ba30043d6f269cb49d1a/native_assets.stamp

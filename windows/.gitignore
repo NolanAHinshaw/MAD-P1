@@ -1,5 +1,9 @@
 flutter/ephemeral/
 
+.flutter-plugins
+
+.dart_tool
+
 # Visual Studio user-specific files.
 *.suo
 *.user

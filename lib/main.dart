@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mealplannerapp/pages/mealplanner.dart';
+import 'package:mealplannerapp/pages/landing_page.dart';
 import 'package:mealplannerapp/pages/signup.dart';
 import 'package:mealplannerapp/pages/login.dart';
 import 'package:mealplannerapp/pages/homepage.dart';
@@ -32,8 +32,9 @@ class MyApp extends StatelessWidget {
                       firstName: '',
                     );
                   default:
-                    // Default to RegistrationPage if the route is not recognized
-                    return const RegistrationPage();
+                    return const LandingPage(
+                      firstName: '',
+                    );
                 }
               });
             },
