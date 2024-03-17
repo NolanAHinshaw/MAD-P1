@@ -5,6 +5,7 @@ class Recipe {
   final String title;
   final String description;
   final String image;
+  final String category;
   final List<String> ingredients;
   final MealTime mealTime;
 
@@ -13,11 +14,12 @@ class Recipe {
     required this.title,
     required this.description,
     required this.image,
+    required this.category,
     required this.ingredients,
     required this.mealTime,
   });
-
 }
+
 List<Recipe> recipes = [
   Recipe(
       id: 1,
@@ -25,6 +27,7 @@ List<Recipe> recipes = [
       description:
           'Spaghetti bolognese consists of spaghetti (long strings of pasta) with an Italian ragù (meat sauce) made with minced beef, bacon and tomatoes, served with Parmesan cheese. Spaghetti bolognese is one of the most popular pasta dishes eaten outside of Italy.',
       image: 'spaghetti.jpg',
+      category: 'Dinner',
       ingredients: [
         '300g spaghetti',
         '1 tablespoon olive oil',
@@ -37,13 +40,15 @@ List<Recipe> recipes = [
         '1 teaspoon dried basil',
         'Salt and pepper to taste',
         'Grated Parmesan cheese for serving'
-      ], mealTime: MealTime.dinner),
+      ],
+      mealTime: MealTime.dinner),
   Recipe(
       id: 2,
       title: 'Chicken Alfredo',
       description:
           'Chicken Alfredo is a classic Italian-American dish that combines tender pieces of chicken with a rich and creamy Alfredo sauce, all served over a bed of pasta.',
       image: 'chicken_alfredo.jpg',
+      category: 'Dinner',
       ingredients: [
         '8 oz fettuccine pasta',
         '1 lb boneless skinless chicken breasts',
@@ -53,13 +58,15 @@ List<Recipe> recipes = [
         '1 cup heavy cream',
         '1 cup grated Parmesan cheese',
         '1/4 cup chopped fresh parsley',
-      ], mealTime: MealTime.dinner),
+      ],
+      mealTime: MealTime.dinner),
   Recipe(
       id: 3,
       title: 'Curry Chicken',
       description:
           'Curry chicken, originating from the Indian subcontinent but now beloved worldwide, especially in Southeast Asia and the Caribbean, typically consists of chicken pieces cooked in a rich, spiced gravy made with a blend of various herbs and spices, offering a flavorful and aromatic experience.',
       image: 'curry_chicken.jpg',
+      category: 'Dinner',
       ingredients: [
         '2 lbs chicken pieces (bone-in for more flavor)',
         '2 tablespoons vegetable oil',
@@ -75,13 +82,15 @@ List<Recipe> recipes = [
         '1 teaspoon garam masala',
         'Salt to taste',
         'Fresh coriander leaves for garnish'
-      ], mealTime: MealTime.dinner),
+      ],
+      mealTime: MealTime.dinner),
   Recipe(
       id: 4,
       title: 'Greek Salad',
       description:
           'Greek salad, also known as Horiatiki salad, is a traditional Mediterranean dish bursting with freshness and flavor, typically consisting of crisp lettuce leaves, juicy tomatoes, cucumbers, red onions, and vibrant bell peppers, all diced or sliced into bite-sized pieces.',
       image: 'greek_salad.jpg',
+      category: 'Lunch',
       ingredients: [
         'Lettuce leaves',
         'Tomatoes',
@@ -95,13 +104,15 @@ List<Recipe> recipes = [
         'Dried oregano',
         'Salt',
         'Black pepper'
-      ], mealTime: MealTime.lunch),
+      ],
+      mealTime: MealTime.lunch),
   Recipe(
       id: 5,
       title: 'Drunken Noodles',
       description:
           'Drunken noodles, also known as Pad Kee Mao, is a popular Thai dish known for its bold flavors and spicy kick. Despite its name, the dish doesn\'t actually contain any alcohol rather the term drunken refers to the fact that it pairs well with alcoholic beverages.',
       image: 'drunken_noodles.jpg',
+      category: 'Dinner',
       ingredients: [
         'Wide rice noodles',
         'Chicken, beef, pork, shrimp, or tofu',
@@ -115,13 +126,15 @@ List<Recipe> recipes = [
         'Sugar',
         'Vegetable oil',
         'Lime wedges (for serving)'
-      ], mealTime: MealTime.dinner),
+      ],
+      mealTime: MealTime.dinner),
   Recipe(
       id: 6,
       title: 'Bánh hỏi heo quay',
       description:
           'Bánh hỏi heo quay is a Vietnamese dish featuring thin rice vermicelli noodles (bánh hỏi) served with slices of crispy roasted pork belly (heo quay). The noodles are delicate and absorbent, while the pork belly offers a satisfying crunch and rich flavor',
       image: 'bánh_hỏi_heo_quay.jpg',
+      category: 'Lunch',
       ingredients: [
         'Rice vermicelli noodles (bánh hỏi)',
         'Roasted pork belly (heo quay)',
@@ -134,7 +147,8 @@ List<Recipe> recipes = [
         'Lime',
         'Garlic',
         'Bird\'s eye chili'
-      ], mealTime: MealTime.lunch),
+      ],
+      mealTime: MealTime.lunch),
   Recipe(
       id: 7,
       title: 'Cheesecake',
@@ -143,21 +157,21 @@ List<Recipe> recipes = [
           'Cheesecake is a dessert made with a soft fresh cheese (typically cottage cheese, cream cheese, quark or ricotta), eggs, and sugar. It may have a crust or base made from crushed cookies (or digestive biscuits), graham crackers, pastry, or sometimes sponge cake.',
       image: 'dessert.jpg',
       ingredients: [
-        
-          '1½ cups graham cracker crumbs',
-          '5 tablespoons unsalted butter, melted',
-          '2 tablespoons sugar',
-          '⅛ teaspoon salt',
-          '32 oz (four 8-oz blocks) cream cheese, at room temperature',
-          '2 cups sugar',
-          '3 tablespoons all-purpose flour',
-          '4 teaspoons vanilla extract',
-          '1 teaspoon packed lemon zest (from 1 lemon)',
-          '2 teaspoons fresh lemon juice (from 1 lemon)',
-          '¼ teaspoon salt',
-          '6 large eggs',
-          '½ cup sour cream',
-      ], mealTime: MealTime.lunch),
+        '1½ cups graham cracker crumbs',
+        '5 tablespoons unsalted butter, melted',
+        '2 tablespoons sugar',
+        '⅛ teaspoon salt',
+        '32 oz (four 8-oz blocks) cream cheese, at room temperature',
+        '2 cups sugar',
+        '3 tablespoons all-purpose flour',
+        '4 teaspoons vanilla extract',
+        '1 teaspoon packed lemon zest (from 1 lemon)',
+        '2 teaspoons fresh lemon juice (from 1 lemon)',
+        '¼ teaspoon salt',
+        '6 large eggs',
+        '½ cup sour cream',
+      ],
+      mealTime: MealTime.lunch),
   Recipe(
       id: 8,
       title: 'Chocolate Chip Cookies',
@@ -166,21 +180,21 @@ List<Recipe> recipes = [
           'These classic chocolate chip cookies boast a perfect balance of crisp edges and chewy centers, with pockets of melted chocolate in every bite. Baked to golden perfection, they offer a nostalgic taste of home that\'s impossible to resist.',
       image: 'cookie.jpg',
       ingredients: [
-        
-          '1 cup (2 sticks) unsalted butter, softened',
-          '1 cup granulated sugar',
-          '1 cup packed light brown sugar',
-          '2 large eggs',
-          '1 teaspoon vanilla extract',
-          '3 cups all-purpose flour',
-          '3 tablespoons all-purpose flour',
-          '1 teaspoon baking soda',
-          '1/2 teaspoon salt',
-          '2 cups semisweet chocolate chips',
-          '¼ teaspoon salt',
-          '6 large eggs',
-          '½ cup sour cream',
-      ], mealTime: MealTime.lunch),
+        '1 cup (2 sticks) unsalted butter, softened',
+        '1 cup granulated sugar',
+        '1 cup packed light brown sugar',
+        '2 large eggs',
+        '1 teaspoon vanilla extract',
+        '3 cups all-purpose flour',
+        '3 tablespoons all-purpose flour',
+        '1 teaspoon baking soda',
+        '1/2 teaspoon salt',
+        '2 cups semisweet chocolate chips',
+        '¼ teaspoon salt',
+        '6 large eggs',
+        '½ cup sour cream',
+      ],
+      mealTime: MealTime.lunch),
   Recipe(
       id: 9,
       title: 'Homemade Vanilla Ice Cream',
@@ -189,13 +203,13 @@ List<Recipe> recipes = [
           'This creamy and indulgent vanilla ice cream is made from scratch with just a few simple ingredients.',
       image: 'ice_cream.jpg',
       ingredients: [
-        
-          '2 cups heavy cream',
-          '1 cup whole milk',
-          '3/4 cup granulated sugar',
-          'Pinch of salt',
-          '2 teaspoons pure vanilla extract',
-      ], mealTime: MealTime.dinner),
+        '2 cups heavy cream',
+        '1 cup whole milk',
+        '3/4 cup granulated sugar',
+        'Pinch of salt',
+        '2 teaspoons pure vanilla extract',
+      ],
+      mealTime: MealTime.dinner),
   Recipe(
       id: 10,
       title: 'Apple Pie',
@@ -204,15 +218,15 @@ List<Recipe> recipes = [
           'Savor the flavors of fall with this comforting apple pie featuring a flaky pastry crust and sweet apple filling.',
       image: 'pie.jpg',
       ingredients: [
-        
-          '1 double pie crust (store-bought or homemade)',
-          '6 cups peeled and sliced apples',
-          '3/4 cup granulated sugar',
-          '2 tablespoons all-purpose flour',
-          '1 teaspoon ground cinnamon',
-          '¼ teaspoon ground nutmeg',
-          '2 tablespoons unsalted butter',
-      ], mealTime: MealTime.dinner),
+        '1 double pie crust (store-bought or homemade)',
+        '6 cups peeled and sliced apples',
+        '3/4 cup granulated sugar',
+        '2 tablespoons all-purpose flour',
+        '1 teaspoon ground cinnamon',
+        '¼ teaspoon ground nutmeg',
+        '2 tablespoons unsalted butter',
+      ],
+      mealTime: MealTime.dinner),
   Recipe(
       id: 11,
       title: 'Tiramisu',
@@ -221,18 +235,18 @@ List<Recipe> recipes = [
           'Tiramisu is an Italian dessert made of ladyfinger pastries (savoiardi) dipped in coffee, layered with a whipped mixture of eggs, sugar and mascarpone and flavoured with cocoa. ',
       image: 'Tiramisu.jpg',
       ingredients: [
-        
-          '2 (3 ounce) packages ladyfinger cookies',
-          '¼ cup strong brewed coffee, at room temperature',
-          '1 pound mascarpone cheese, at room temperature',
-          '6 large egg yolks',
-          '¾ cup white sugar',
-          '1 tablespoon unsweetened cocoa powder',
-          '⅔ cup milk',
-          '1 ¼ cups heavy cream',
-          '½ teaspoon vanilla extract',
-          '2 tablespoons rum (optional)',
-      ], mealTime: MealTime.dinner),
+        '2 (3 ounce) packages ladyfinger cookies',
+        '¼ cup strong brewed coffee, at room temperature',
+        '1 pound mascarpone cheese, at room temperature',
+        '6 large egg yolks',
+        '¾ cup white sugar',
+        '1 tablespoon unsweetened cocoa powder',
+        '⅔ cup milk',
+        '1 ¼ cups heavy cream',
+        '½ teaspoon vanilla extract',
+        '2 tablespoons rum (optional)',
+      ],
+      mealTime: MealTime.dinner),
   Recipe(
       id: 12,
       title: 'Baklava',
@@ -241,22 +255,22 @@ List<Recipe> recipes = [
           'Baklava is a layered dessert made of filo pastry sheets, filled with chopped nuts, and sweetened with syrup or honey.',
       image: 'Baklava.jpg',
       ingredients: [
-        
-          '6 oz shelled pistachios, coarsely chopped',
-          '6 oz walnuts, coarsely chopped',
-          '6 oz hazelnuts, coarsely chopped ',
-          '¼ cup sugar',
-          '1 to 2 tablespoon ground cinnamon (start with less if you\'re not sure)',
-          'large pinch of ground cloves ',
-          '16-oz package phyllo dough, thawed',
-          '1 ½ to 2 sticks of unsalted butter (up to 16 tbsp), melted',
-          '¾ cup sugar',
-          '1 cup cold water',
-          '1 cup honey',
-          '1 tbsp orange extract (optional)',
-          '5 whole cloves',
-          '1 lemon, juice of',
-      ], mealTime: MealTime.dinner),
+        '6 oz shelled pistachios, coarsely chopped',
+        '6 oz walnuts, coarsely chopped',
+        '6 oz hazelnuts, coarsely chopped ',
+        '¼ cup sugar',
+        '1 to 2 tablespoon ground cinnamon (start with less if you\'re not sure)',
+        'large pinch of ground cloves ',
+        '16-oz package phyllo dough, thawed',
+        '1 ½ to 2 sticks of unsalted butter (up to 16 tbsp), melted',
+        '¾ cup sugar',
+        '1 cup cold water',
+        '1 cup honey',
+        '1 tbsp orange extract (optional)',
+        '5 whole cloves',
+        '1 lemon, juice of',
+      ],
+      mealTime: MealTime.dinner),
   Recipe(
       id: 13,
       title: 'Vanilla Milkshake',
@@ -265,13 +279,13 @@ List<Recipe> recipes = [
           'A vanilla milkshake is a lusciously creamy beverage made by blending vanilla ice cream, milk, and vanilla extract. It\'s a timeless treat that offers a perfect balance of sweetness and rich vanilla flavor, ideal for satisfying dessert cravings or cooling off on a hot day.',
       image: 'v_milkshake.jpg',
       ingredients: [
-        
-          '1 1/2 cup vanilla ice cream',
-          '1/4 cup milk',
-          'Whipped topping, for garnish',
-          'Maraschino cherry, for garnish',
-          'Sprinkles, for garnish',
-      ], mealTime: MealTime.breakfast),
+        '1 1/2 cup vanilla ice cream',
+        '1/4 cup milk',
+        'Whipped topping, for garnish',
+        'Maraschino cherry, for garnish',
+        'Sprinkles, for garnish',
+      ],
+      mealTime: MealTime.breakfast),
   Recipe(
       id: 14,
       title: 'Caribbean Dream Smoothie',
@@ -280,14 +294,14 @@ List<Recipe> recipes = [
           'The Caribbean Dream Smoothie is a tropical delight, blending bananas, mangoes, pineapples, and coconut milk into a creamy, refreshing concoction. With its vibrant flavors and velvety texture, it\'s the perfect sip to transport you to island paradise in just one taste.',
       image: 'c_smoothie.jpg',
       ingredients: [
-        
-          'Blend 1/2 cup pineapple chunks',
-          '1/4 cup 2% Greek yogurt',
-          '1/4 cup refrigerated unsweetened coconut milk',
-          '1/4 cup orange juice',
-          '1/4 large banana',
-          'handful of ice cubes until smooth',
-      ], mealTime: MealTime.breakfast),
+        'Blend 1/2 cup pineapple chunks',
+        '1/4 cup 2% Greek yogurt',
+        '1/4 cup refrigerated unsweetened coconut milk',
+        '1/4 cup orange juice',
+        '1/4 large banana',
+        'handful of ice cubes until smooth',
+      ],
+      mealTime: MealTime.breakfast),
   Recipe(
       id: 15,
       title: 'Strawberry Smoothie',
@@ -296,12 +310,12 @@ List<Recipe> recipes = [
           'strawberries with creamy yogurt for a refreshing treat. Perfect for a quick breakfast or a midday pick-me-up, this smoothie offers a burst of fruity flavor in every sip.',
       image: 's_smoothie.jpg',
       ingredients: [
-        
-          '1 cup low fat milk (or juice)',
-          '1/2 cup strawberry Greek yogurt',
-          '1 frozen banana cut in chunks',
-          '1 1/2 cups fresh or frozen strawberries',
-      ], mealTime: MealTime.breakfast),
+        '1 cup low fat milk (or juice)',
+        '1/2 cup strawberry Greek yogurt',
+        '1 frozen banana cut in chunks',
+        '1 1/2 cups fresh or frozen strawberries',
+      ],
+      mealTime: MealTime.breakfast),
   Recipe(
       id: 16,
       title: 'Chai Latte',
@@ -322,7 +336,8 @@ List<Recipe> recipes = [
         '4 cup whole milk',
         'Ground cinnamon, for garnish',
         'Ground cardamom, for garnish',
-      ], mealTime: MealTime.breakfast),
+      ],
+      mealTime: MealTime.breakfast),
   Recipe(
       id: 17,
       title: 'Caramel Latte',
@@ -338,7 +353,8 @@ List<Recipe> recipes = [
         '1 teaspoon caramel extract',
         'Reddi wip optional',
         'Caramel Ice Cream Toppings optional',
-      ], mealTime: MealTime.breakfast),
+      ],
+      mealTime: MealTime.breakfast),
   Recipe(
       id: 18,
       title: 'Cookie & Cream milkshake',
@@ -350,7 +366,8 @@ List<Recipe> recipes = [
         '4 to 6 cookies',
         '1/4 cup whole milk, more to taste',
         '1 1/2 to 2 cups ice cream (about 3 large scoops), softened',
-      ], mealTime: MealTime.dinner),
+      ],
+      mealTime: MealTime.dinner),
   Recipe(
       id: 19,
       title: 'Indian Butter Chicken Curry',
@@ -376,28 +393,31 @@ List<Recipe> recipes = [
         'Fresh Ginger',
         '800 g (28oz) canned tomatoes',
         '1 cup Heavy Cream',
-      ], mealTime: MealTime.dinner),
+      ],
+      mealTime: MealTime.dinner),
   Recipe(
-      id: 20,
-      title: 'Thai Green Chicken Curry',
-      category: 'Curry',
-      description:
-          'A fragrant Thai curry made with tender chicken, coconut milk, green curry paste, and an array of vegetables like eggplant, and snow peas. It\'s aromatic, slightly spicy, and bursting with flavors.',
-      image: 't_curry.jpg',
-      ingredients: [
-        '2 tbsp vegetable oil',
-        '400 g/14oz coconut milk',
-        '1 cup (250ml) chicken or vegetable broth',
-        '350 g/12 oz chicken thigh',
-        '2 Japanese eggplants',
-        '1 1/2 cups snow peas ',
-        '1 - 3 tsp fish sauce',
-        '6 kaffir lime leaves',
-        '16 Thai basil leaves',
-        'Juice of 1/2 lime ',
-        '1/8 tsp salt',
-        '1 - 3 tsp white sugar',
-      ]),
+    id: 20,
+    title: 'Thai Green Chicken Curry',
+    category: 'Curry',
+    description:
+        'A fragrant Thai curry made with tender chicken, coconut milk, green curry paste, and an array of vegetables like eggplant, and snow peas. It\'s aromatic, slightly spicy, and bursting with flavors.',
+    image: 't_curry.jpg',
+    ingredients: [
+      '2 tbsp vegetable oil',
+      '400 g/14oz coconut milk',
+      '1 cup (250ml) chicken or vegetable broth',
+      '350 g/12 oz chicken thigh',
+      '2 Japanese eggplants',
+      '1 1/2 cups snow peas ',
+      '1 - 3 tsp fish sauce',
+      '6 kaffir lime leaves',
+      '16 Thai basil leaves',
+      'Juice of 1/2 lime ',
+      '1/8 tsp salt',
+      '1 - 3 tsp white sugar',
+    ],
+    mealTime: MealTime.dinner,
+  ),
   Recipe(
       id: 21,
       title: 'Japanese Chicken Katsu Curry',
@@ -428,7 +448,8 @@ List<Recipe> recipes = [
         '2 medium egg(s)',
         '50 g panko breadcrumbs',
         '4 tbsp grated parmesan cheese',
-      ], mealTime: MealTime.dinner),
+      ],
+      mealTime: MealTime.dinner),
   Recipe(
       id: 22,
       title: 'Sri Lankan Coconut Fish Curry',
@@ -456,7 +477,8 @@ List<Recipe> recipes = [
         '1 tsp tamarind concentrate more if you\'re using regular tamarind paste',
         '2 cups coconut milk preferably full fat coconut milk',
         'Salt to taste',
-      ], mealTime: MealTime.lunch),
+      ],
+      mealTime: MealTime.lunch),
   Recipe(
       id: 23,
       title: 'Thai Massaman Beef Curry',
@@ -476,40 +498,43 @@ List<Recipe> recipes = [
         '½ a large onion, cut into ½-inch strips',
         '¼ cup roasted peanuts',
         'Jasmine rice for serving',
-      ], mealTime: MealTime.dinner),
+      ],
+      mealTime: MealTime.dinner),
   Recipe(
-      id: 24,
-      title: 'Vegetarian Chickpea and Spinach Curry',
-      category: 'Curry',
-      description:
-          'A nutritious and delicious vegetarian curry featuring chickpeas and spinach cooked in a fragrant sauce made from onions, tomatoes, ginger, garlic, and a blend of spices like cumin, coriander, and turmeric. It\'s hearty, wholesome, and packed with flavor.',
-      image: 'veg_curry.jpg',
-      ingredients: [
-        '3 tbsp sunflower or canola oil',
-        '1 large onion finely chopped',
-        '4 cloves garlic, crushed',
-        '1 inch ginger, finely grated',
-        '1 tbsp ground coriander',
-        '1/2 tbsp ground turmeric',
-        '1/2 tbsp ground cumin',
-        '1/4 - 1/2 tsp cayenne pepper or chili flakes',
-        '1.5 cups crushed tomatoes (400g)',
-        '2.5 cups cooked chickpeas (400g)',
-        '1/2 cup vegetable stock (120 ml)',
-        '1 cup frozen chopped spinach or 100gm fresh/frozen chopped spinach',
-        '1/2 - 1 tsp salt',
-        '1 tsp sugar',
-        '1 tsp garam masala',
-        '1 tbsp lemon juice',
-        'OPTIONAL: 1/4-1/2 cup full-fat coconut milk (50-100 ml)',
-        '1 tbsp chopped fresh cilantro leaves (coriander leaves)'
-      ], mealTime: MealTime.dinner,
-),
+    id: 24,
+    title: 'Vegetarian Chickpea and Spinach Curry',
+    category: 'Curry',
+    description:
+        'A nutritious and delicious vegetarian curry featuring chickpeas and spinach cooked in a fragrant sauce made from onions, tomatoes, ginger, garlic, and a blend of spices like cumin, coriander, and turmeric. It\'s hearty, wholesome, and packed with flavor.',
+    image: 'veg_curry.jpg',
+    ingredients: [
+      '3 tbsp sunflower or canola oil',
+      '1 large onion finely chopped',
+      '4 cloves garlic, crushed',
+      '1 inch ginger, finely grated',
+      '1 tbsp ground coriander',
+      '1/2 tbsp ground turmeric',
+      '1/2 tbsp ground cumin',
+      '1/4 - 1/2 tsp cayenne pepper or chili flakes',
+      '1.5 cups crushed tomatoes (400g)',
+      '2.5 cups cooked chickpeas (400g)',
+      '1/2 cup vegetable stock (120 ml)',
+      '1 cup frozen chopped spinach or 100gm fresh/frozen chopped spinach',
+      '1/2 - 1 tsp salt',
+      '1 tsp sugar',
+      '1 tsp garam masala',
+      '1 tbsp lemon juice',
+      'OPTIONAL: 1/4-1/2 cup full-fat coconut milk (50-100 ml)',
+      '1 tbsp chopped fresh cilantro leaves (coriander leaves)'
+    ],
+    mealTime: MealTime.dinner,
+  ),
   Recipe(
     id: 7,
     title: 'Scrambled Eggs with Avocado Toast',
     description: 'Quick and healthy breakfast option!',
     image: 'scrambled-eggs-avocado-toast.jpg',
+    category: 'Breakfast',
     ingredients: [
       '2 eggs',
       '1 avocado',
@@ -524,6 +549,7 @@ List<Recipe> recipes = [
     title: 'Greek Yogurt Parfait',
     description: 'A light and refreshing breakfast parfait!',
     image: 'yogurt-parfait.jpg',
+    category: 'Dessert',
     ingredients: [
       '1 cup Greek yogurt',
       '1/2 cup granola',
@@ -531,5 +557,5 @@ List<Recipe> recipes = [
       'Honey or maple syrup (optional)',
     ],
     mealTime: MealTime.breakfast,
-    ),
-    ];
+  ),
+];

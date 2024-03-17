@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:mealplannerapp/components/NavigationButton.dart';
 import 'package:mealplannerapp/components/TrendingRecipes.dart';
 import 'package:mealplannerapp/models/recipes.dart';
+import 'package:mealplannerapp/pages/all_recipes.dart';
+import 'package:mealplannerapp/pages/meal_planner.dart';
 import 'package:mealplannerapp/pages/recipe_detail.dart';
 import 'package:mealplannerapp/pages/category_recipes.dart';
 
 class HomePage extends StatelessWidget {
   final String firstName;
-
-  const HomePage({Key? key, required this.firstName}) : super(key: key);
+  HomePage({Key? key, required this.firstName}) : super(key: key);
+  String? selectedPage = null;
 
   @override
   Widget build(BuildContext context) {
@@ -25,6 +28,37 @@ class HomePage extends StatelessWidget {
             'Welcome',
             style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
           ), // Greeting message
+          DropdownButton(
+            value: selectedPage,
+            items: _dropDownItem(),
+            onChanged: (value) {
+              selectedPage = value;
+              switch (value) {
+                case "Homepage":
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => HomePage(
+                              firstName: firstName,
+                            )),
+                  );
+                  break;
+                case "Meal Planner":
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => MealPlannerPage()),
+                  );
+                  break;
+                case "All Recipes":
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => AllRecipesPage()),
+                  );
+                  break;
+              }
+            },
+            hint: const Text('Navigation'),
+          ),
           const SizedBox(height: 20),
           GestureDetector(
             onTap: () {
@@ -100,6 +134,16 @@ class HomePage extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  List<DropdownMenuItem<String>> _dropDownItem() {
+    List<String> ddl = ["Homepage", "Meal Planner", "All Recipes"];
+    return ddl
+        .map((value) => DropdownMenuItem(
+              value: value,
+              child: Text(value),
+            ))
+        .toList();
   }
 }
 

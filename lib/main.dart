@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mealplannerapp/pages/landing_page.dart';
-import 'package:mealplannerapp/pages/mealplanner.dart';
+import 'package:mealplannerapp/pages/meal_planner.dart';
 import 'package:mealplannerapp/pages/signup.dart';
 import 'package:mealplannerapp/pages/login.dart';
 import 'package:mealplannerapp/pages/homepage.dart';
@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
                       firstName: '',
                     );
                   case '/homepage':
-                    return const HomePage(
+                    return HomePage(
                       firstName: '',
                     );
                   case '/meal-planner':

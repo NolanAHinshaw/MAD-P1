@@ -46,7 +46,7 @@ class MealPlannerState extends State<MealPlannerPage> {
     final endOfCurrentWeek = startOfCurrentWeek.add(Duration(days: 6));
     return Scaffold(
       appBar: AppBar(
-        title: Text("insert title here"),
+        title: const Text("Personalized Meal Planner"),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
