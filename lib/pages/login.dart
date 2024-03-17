@@ -57,7 +57,7 @@ class LoginState extends State<LoginPage> {
                   const SizedBox(height: 10.0),
                   TextFormField(
                     controller: _usernameController,
-                    decoration: InputDecoration(
+                    decoration:  InputDecoration(
                       hintText: 'Username',
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10.0),

@@ -171,9 +171,8 @@ class RegistrationState extends State<RegistrationPage> {
                               );
                               Navigator.of(context).push(
                                 MaterialPageRoute(
-                                  builder: (context) => const LoginPage(
-                                    firstName: '',
-                                  ),
+                                  builder: (context) => LoginPage(firstName: '',
+                                ),
                                 ),
                               );
                             }

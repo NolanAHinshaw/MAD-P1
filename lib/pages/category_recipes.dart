@@ -22,8 +22,7 @@ class CategoryRecipesPage extends StatelessWidget {
         itemCount: categoryRecipes.length,
         itemBuilder: (context, index) {
           final recipe = categoryRecipes[index];
-          return ListTile(
-            title: Text(recipe.title),
+          return GestureDetector(
             onTap: () {
               Navigator.push(
                 context,
@@ -32,6 +31,37 @@ class CategoryRecipesPage extends StatelessWidget {
                 ),
               );
             },
+            child: Container(
+              margin: EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
+              padding: EdgeInsets.all(12.0),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10.0),
+                color: Colors.grey[200],
+              ),
+              child: Row(
+                children: [
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(8.0),
+                    child: Image.asset(
+                      'assets/images/${recipe.image}',
+                      width: 80,
+                      height: 80,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  SizedBox(width: 12.0),
+                  Expanded(
+                    child: Text(
+                      recipe.title,
+                      style: TextStyle(
+                        fontSize: 18.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
           );
         },
       ),
