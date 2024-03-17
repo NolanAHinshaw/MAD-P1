@@ -1,20 +1,23 @@
+enum MealTime { breakfast, lunch, dinner }
+
 class Recipe {
   final int id;
   final String title;
   final String description;
   final String image;
   final List<String> ingredients;
-  final String? category;
+  final MealTime mealTime;
 
-  Recipe(
-      {required this.id,
-      required this.title,
-      required this.description,
-      required this.image,
-      required this.ingredients,
-      this.category});
+  Recipe({
+    required this.id,
+    required this.title,
+    required this.description,
+    required this.image,
+    required this.ingredients,
+    required this.mealTime,
+  });
+
 }
-
 List<Recipe> recipes = [
   Recipe(
       id: 1,
@@ -34,7 +37,7 @@ List<Recipe> recipes = [
         '1 teaspoon dried basil',
         'Salt and pepper to taste',
         'Grated Parmesan cheese for serving'
-      ]),
+      ], mealTime: MealTime.dinner),
   Recipe(
       id: 2,
       title: 'Chicken Alfredo',
@@ -50,7 +53,7 @@ List<Recipe> recipes = [
         '1 cup heavy cream',
         '1 cup grated Parmesan cheese',
         '1/4 cup chopped fresh parsley',
-      ]),
+      ], mealTime: MealTime.dinner),
   Recipe(
       id: 3,
       title: 'Curry Chicken',
@@ -72,7 +75,7 @@ List<Recipe> recipes = [
         '1 teaspoon garam masala',
         'Salt to taste',
         'Fresh coriander leaves for garnish'
-      ]),
+      ], mealTime: MealTime.dinner),
   Recipe(
       id: 4,
       title: 'Greek Salad',
@@ -92,7 +95,7 @@ List<Recipe> recipes = [
         'Dried oregano',
         'Salt',
         'Black pepper'
-      ]),
+      ], mealTime: MealTime.lunch),
   Recipe(
       id: 5,
       title: 'Drunken Noodles',
@@ -112,7 +115,7 @@ List<Recipe> recipes = [
         'Sugar',
         'Vegetable oil',
         'Lime wedges (for serving)'
-      ]),
+      ], mealTime: MealTime.dinner),
   Recipe(
       id: 6,
       title: 'Bánh hỏi heo quay',
@@ -131,7 +134,7 @@ List<Recipe> recipes = [
         'Lime',
         'Garlic',
         'Bird\'s eye chili'
-      ]),
+      ], mealTime: MealTime.lunch),
   Recipe(
       id: 7,
       title: 'Cheesecake',
@@ -154,7 +157,7 @@ List<Recipe> recipes = [
           '¼ teaspoon salt',
           '6 large eggs',
           '½ cup sour cream',
-      ]),
+      ], mealTime: MealTime.lunch),
   Recipe(
       id: 8,
       title: 'Chocolate Chip Cookies',
@@ -177,7 +180,7 @@ List<Recipe> recipes = [
           '¼ teaspoon salt',
           '6 large eggs',
           '½ cup sour cream',
-      ]),
+      ], mealTime: MealTime.lunch),
   Recipe(
       id: 9,
       title: 'Homemade Vanilla Ice Cream',
@@ -192,7 +195,7 @@ List<Recipe> recipes = [
           '3/4 cup granulated sugar',
           'Pinch of salt',
           '2 teaspoons pure vanilla extract',
-      ]),
+      ], mealTime: MealTime.dinner),
   Recipe(
       id: 10,
       title: 'Apple Pie',
@@ -209,7 +212,7 @@ List<Recipe> recipes = [
           '1 teaspoon ground cinnamon',
           '¼ teaspoon ground nutmeg',
           '2 tablespoons unsalted butter',
-      ]),
+      ], mealTime: MealTime.dinner),
   Recipe(
       id: 11,
       title: 'Tiramisu',
@@ -229,7 +232,7 @@ List<Recipe> recipes = [
           '1 ¼ cups heavy cream',
           '½ teaspoon vanilla extract',
           '2 tablespoons rum (optional)',
-      ]),
+      ], mealTime: MealTime.dinner),
   Recipe(
       id: 12,
       title: 'Baklava',
@@ -253,7 +256,7 @@ List<Recipe> recipes = [
           '1 tbsp orange extract (optional)',
           '5 whole cloves',
           '1 lemon, juice of',
-      ]),
+      ], mealTime: MealTime.dinner),
   Recipe(
       id: 13,
       title: 'Vanilla Milkshake',
@@ -268,7 +271,7 @@ List<Recipe> recipes = [
           'Whipped topping, for garnish',
           'Maraschino cherry, for garnish',
           'Sprinkles, for garnish',
-      ]),
+      ], mealTime: MealTime.breakfast),
   Recipe(
       id: 14,
       title: 'Caribbean Dream Smoothie',
@@ -284,7 +287,7 @@ List<Recipe> recipes = [
           '1/4 cup orange juice',
           '1/4 large banana',
           'handful of ice cubes until smooth',
-      ]),
+      ], mealTime: MealTime.breakfast),
   Recipe(
       id: 15,
       title: 'Strawberry Smoothie',
@@ -298,7 +301,7 @@ List<Recipe> recipes = [
           '1/2 cup strawberry Greek yogurt',
           '1 frozen banana cut in chunks',
           '1 1/2 cups fresh or frozen strawberries',
-      ]),
+      ], mealTime: MealTime.breakfast),
   Recipe(
       id: 16,
       title: 'Chai Latte',
@@ -319,7 +322,7 @@ List<Recipe> recipes = [
         '4 cup whole milk',
         'Ground cinnamon, for garnish',
         'Ground cardamom, for garnish',
-      ]),
+      ], mealTime: MealTime.breakfast),
   Recipe(
       id: 17,
       title: 'Caramel Latte',
@@ -335,7 +338,7 @@ List<Recipe> recipes = [
         '1 teaspoon caramel extract',
         'Reddi wip optional',
         'Caramel Ice Cream Toppings optional',
-      ]),
+      ], mealTime: MealTime.breakfast),
   Recipe(
       id: 18,
       title: 'Cookie & Cream milkshake',
@@ -347,7 +350,7 @@ List<Recipe> recipes = [
         '4 to 6 cookies',
         '1/4 cup whole milk, more to taste',
         '1 1/2 to 2 cups ice cream (about 3 large scoops), softened',
-      ]),
+      ], mealTime: MealTime.dinner),
   Recipe(
       id: 19,
       title: 'Indian Butter Chicken Curry',
@@ -373,7 +376,7 @@ List<Recipe> recipes = [
         'Fresh Ginger',
         '800 g (28oz) canned tomatoes',
         '1 cup Heavy Cream',
-      ]),
+      ], mealTime: MealTime.dinner),
   Recipe(
       id: 20,
       title: 'Thai Green Chicken Curry',
@@ -425,7 +428,7 @@ List<Recipe> recipes = [
         '2 medium egg(s)',
         '50 g panko breadcrumbs',
         '4 tbsp grated parmesan cheese',
-      ]),
+      ], mealTime: MealTime.dinner),
   Recipe(
       id: 22,
       title: 'Sri Lankan Coconut Fish Curry',
@@ -453,7 +456,7 @@ List<Recipe> recipes = [
         '1 tsp tamarind concentrate more if you\'re using regular tamarind paste',
         '2 cups coconut milk preferably full fat coconut milk',
         'Salt to taste',
-      ]),
+      ], mealTime: MealTime.lunch),
   Recipe(
       id: 23,
       title: 'Thai Massaman Beef Curry',
@@ -473,7 +476,7 @@ List<Recipe> recipes = [
         '½ a large onion, cut into ½-inch strips',
         '¼ cup roasted peanuts',
         'Jasmine rice for serving',
-      ]),
+      ], mealTime: MealTime.dinner),
   Recipe(
       id: 24,
       title: 'Vegetarian Chickpea and Spinach Curry',
@@ -500,5 +503,33 @@ List<Recipe> recipes = [
         '1 tbsp lemon juice',
         'OPTIONAL: 1/4-1/2 cup full-fat coconut milk (50-100 ml)',
         '1 tbsp chopped fresh cilantro leaves (coriander leaves)'
-      ]),
-];
+      ], mealTime: MealTime.dinner,
+),
+  Recipe(
+    id: 7,
+    title: 'Scrambled Eggs with Avocado Toast',
+    description: 'Quick and healthy breakfast option!',
+    image: 'scrambled-eggs-avocado-toast.jpg',
+    ingredients: [
+      '2 eggs',
+      '1 avocado',
+      '2 slices of whole grain bread',
+      'Salt and pepper to taste',
+      'Optional toppings: cherry tomatoes, feta cheese, herbs'
+    ],
+    mealTime: MealTime.breakfast,
+  ),
+  Recipe(
+    id: 8,
+    title: 'Greek Yogurt Parfait',
+    description: 'A light and refreshing breakfast parfait!',
+    image: 'yogurt-parfait.jpg',
+    ingredients: [
+      '1 cup Greek yogurt',
+      '1/2 cup granola',
+      '1/2 cup mixed berries (strawberries, blueberries, raspberries)',
+      'Honey or maple syrup (optional)',
+    ],
+    mealTime: MealTime.breakfast,
+    ),
+    ];
