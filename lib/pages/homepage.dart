@@ -7,19 +7,25 @@ import 'package:mealplannerapp/pages/category_recipes.dart';
 class HomePage extends StatelessWidget {
   final String firstName;
 
-  const HomePage({Key? key, this.firstName = ''}) : super(key: key);
+  const HomePage({Key? key, required this.firstName}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          firstName.isNotEmpty ? 'Welcome, $firstName!' : 'Meal Planner',
+          'Homepage',
         ),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          const SizedBox(height: 20),
+          const Text(
+            'Welcome',
+            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+          ), // Greeting message
+          const SizedBox(height: 20),
           GestureDetector(
             onTap: () {
               // Navigate to the recipe detail page with a default recipe
@@ -32,11 +38,11 @@ class HomePage extends StatelessWidget {
                 ),
               );
             },
-            child: const TrendingRecipes(),
+            child: TrendingRecipes(), // Removed the Container widget here
           ),
           const SizedBox(height: 30),
           const Text(
-            'Explore Categories',
+            'Explore Categories:',
             style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
           ),
           SingleChildScrollView(
@@ -70,7 +76,7 @@ class HomePage extends StatelessWidget {
                       ),
                     );
                   },
-                  child: CategoryWidget(
+                  child: const CategoryWidget(
                       categoryName: 'Dessert', image: 'dessert.jpg'),
                 ),
                 GestureDetector(
@@ -79,13 +85,13 @@ class HomePage extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => CategoryRecipesPage(
+                        builder: (context) => const CategoryRecipesPage(
                           category: 'Drinks',
                         ),
                       ),
                     );
                   },
-                  child: CategoryWidget(
+                  child: const CategoryWidget(
                       categoryName: 'Drinks', image: 'drinks.jpg'),
                 ),
               ],
